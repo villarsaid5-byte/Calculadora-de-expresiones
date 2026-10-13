@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de expresiones</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <main class="main-container">
+    <header class="header">
+      <div class="brand-icon"><i class="fas fa-square-root-variable"></i></div>
+      <p class="eyebrow">MATEMÁTICAS · PASO A PASO</p>
+      <h1>Resuelve una expresión</h1>
+      <p class="subtitle">Escribe una operación y descubre su resultado.</p>
+    </header>
+
+    <section class="input-section">
+      <label for="expresion">Expresión matemática</label>
+      <form id="formulario">
+        <div class="input-group">
+          <i class="fas fa-calculator input-icon"></i>
+          <input id="expresion" type="text" placeholder="12 + 3 * (8 - 5)" autocomplete="off" required>
+        </div>
+        <p class="input-help">Usa números, variables, paréntesis y los operadores +, -, * y /.</p>
+        <div class="actions">
+          <button class="button button-primary" type="submit">Calcular</button>
+          <button class="button button-secondary" type="button" id="limpiar">Limpiar</button>
+        </div>
+      </form>
+      <p id="alerta" class="alert" role="alert" hidden></p>
+    </section>
+
+    <section class="answer-card" id="resultado-panel">
+      <div class="answer-icon"><i class="fas fa-check"></i></div>
+      <div>
+        <h2>Resultado</h2>
+        <p id="resultado">—</p>
+      </div>
+    </section>
+
+    <section class="steps-section">
+      <div class="section-heading">
+        <span class="section-icon"><i class="fas fa-list-ol"></i></span>
+        <div>
+          <h2>Procedimiento</h2>
+          <p>Pasos para resolver la operación.</p>
+        </div>
+      </div>
+      <ol id="lista-pasos" class="steps-list">
+        <li class="empty-state">Los pasos aparecerán aquí al calcular.</li>
+      </ol>
+    </section>
+
+    <details class="intermediate-section">
+      <summary>Ver cuádruplos, tríplos y código</summary>
+      <div class="results-section">
+        <div class="table-container">
+          <h3>Cuádruplos</h3>
+          <div class="table-scroll">
+            <table id="tabla-cuadruplos">
+              <thead>
+                <tr><th>#</th><th>Operador</th><th>Op. 1</th><th>Op. 2</th><th>Resultado</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="table-container">
+          <h3>Triplos</h3>
+          <div class="table-scroll">
+            <table id="tabla-triplos">
+              <thead>
+                <tr><th>#</th><th>Operador</th><th>Op. 1</th><th>Op. 2</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="code-section">
+        <h3>Código equivalente en JavaScript</h3>
+        <pre id="codigo-js">El código aparecerá aquí al calcular.</pre>
+      </div>
+    </details>
+
+    <footer>Calculadora de expresiones · Hecha para aprender</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
